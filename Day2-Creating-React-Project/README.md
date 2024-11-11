@@ -13,4 +13,4 @@ Currently, two official plugins are available:
 
 This is my first time pushing a React Project into a repo!
 
--React project with Bootstrap
+- React project with Bootstrap
