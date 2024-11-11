@@ -11,4 +11,4 @@ Currently, two official plugins are available:
 
 # About
 
-This is my first time pushing a React Project into a repo.
+This is my first time pushing a React Project into a repo!
