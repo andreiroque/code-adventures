@@ -1,5 +1,72 @@
+:root {
+  --border-radius: 16px;
+  --padding: 3px;
+}
+
+/* I don't know why this is needed */
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+body {
+  background-color: #222;
+}
+.container {
+  height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box {
+  height: 700px;
+  width: 550px;
+  border-radius: var(--border-radius);
+  position: relative;
+  background-color: #666;
+}
+
+.box::after,
+.box::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: conic-gradient(
+    from var(--angle),
+    #e27396,
+    #ea9ab2,
+    #b3dee2,
+    #eaf2d7,
+    #efcfe3,
+    #ea9ab2,
+    #e27396
+  );
+  z-index: -1000;
+  padding: var(--padding);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: calc(var(--border-radius) + var(--padding));
+  animation: 3s spin linear infinite;
+}
+
+.box::before {
+  filter: blur(20px);
+}
+
+@keyframes spin {
+  0% {
+    --angle: 0deg;
+  }
+  100% {
+    --angle: 360deg;
+  }
 }
