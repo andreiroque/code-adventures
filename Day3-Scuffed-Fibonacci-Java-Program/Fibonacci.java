@@ -38,7 +38,8 @@ public class Fibonacci{
       }
     }catch(InputMismatchException e){
       input.nextLine();
-      System.out.println("\nError: " + e + "\n");
+      System.out.println("\nError: " + e);
+      System.out.println("Please enter a NUMBER ...\n");
       main(args); //remove args if there's an error.
     }finally{
       input.close();
