@@ -1,0 +1,11 @@
+body {
+  cursor: default;
+}
+.mask {
+  position: absolute;
+  mask-image: url("../public/Mask.svg");
+  mask-size: 100px;
+  mask-repeat: no-repeat;
+  transition: all 0.3s ease-out;
+  transition-property: mask-position, mask-size;
+}
