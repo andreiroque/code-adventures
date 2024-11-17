@@ -14,6 +14,7 @@ const App = () => {
             exit={{ y: -100, opacity: 0 }}
             className="bg-slate-800 p-20 rounded-lg font-mono text-gray-300"
             whileHover={{ scale: 1.5 }}
+            whileTap={{ scale: 0.95 }}
           >
             <h1 className="text-3xl">Hello World!</h1>
           </motion.div>
