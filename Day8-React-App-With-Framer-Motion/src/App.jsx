@@ -12,7 +12,7 @@ const App = () => {
             initial={{ y: -100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: -100, opacity: 0 }}
-            className="bg-slate-800 p-20 rounded-lg font-mono text-gray-300"
+            className="bg-slate-800 p-20 rounded-lg font-mono text-gray-300 mdiv"
             whileHover={{ scale: 1.5 }}
             whileTap={{ scale: 0.95 }}
           >
