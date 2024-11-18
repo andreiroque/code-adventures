@@ -15,7 +15,7 @@
   justify-content: center;
   h1 {
     font-size: 10rem;
-    font-weight: 300;
+    font-weight: 100;
   }
 }
 .horizontal-scroll {
@@ -24,5 +24,5 @@
 }
 
 .horizontal {
-  font-size: 4rem;
+  font-size: 7rem;
 }
