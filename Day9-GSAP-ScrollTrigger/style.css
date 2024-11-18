@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Dejavu Sans Mono", monospace;
+}
+.main {
+  overflow-x: hidden;
+}
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  h1 {
+    font-size: 10rem;
+    font-weight: 300;
+  }
+}
+.horizontal-scroll {
+  width: 300dvw;
+  display: flex;
+}
+
+.horizontal {
+  font-size: 4rem;
+}
