@@ -1,5 +1,23 @@
+:root {
+  --image-1: "";
+  --image-2: "https://wallhaven.cc/w/3lp2md";
+  --image-3: "https://wallhaven.cc/w/2ymdrg";
+  --image-4: "https://wallhaven.cc/w/yxdrex";
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+.container {
+  height: 400dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.parallax {
+  background-image: url(https://wallhaven.cc/w/d6rd1j);
 }
