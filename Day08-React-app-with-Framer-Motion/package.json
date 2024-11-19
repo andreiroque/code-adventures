@@ -1,5 +1,5 @@
 {
-  "name": "day7-mask-hover-effect",
+  "name": "day08-react-app-with-framer-motion",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "framer-motion": "^11.11.17",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
