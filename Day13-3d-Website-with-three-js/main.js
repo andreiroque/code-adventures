@@ -57,7 +57,7 @@ function modelAnimations() {
       trigger: "#container3D",
       start: "top top",
       end: "+=3000",
-      markers: true,
+      // markers: true,
       scrub: 1,
     },
   });
@@ -71,7 +71,7 @@ function modelAnimations() {
       trigger: "#container3D",
       start: "+=3000",
       end: "+=2500",
-      markers: true,
+      // markers: true,
       scrub: 1,
     },
   });
