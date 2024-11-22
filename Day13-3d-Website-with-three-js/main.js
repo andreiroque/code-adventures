@@ -29,9 +29,7 @@ loader.load(
 
     modelAnimations();
   },
-  function (xhr) {
-    console.log((xhr.loaded / xhr.total) * 100 + "% loaded");
-  },
+  function (xhr) {},
   function (err) {
     console.error("An error occured while loading the model", err);
   }
