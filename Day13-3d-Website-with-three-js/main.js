@@ -26,9 +26,15 @@ loader.load(
     napoleon.scale.set(5, 5, 5);
     napoleon.position.y -= 1;
     scene.add(napoleon);
+
+    modelAnimations();
   },
-  function (xhr) {},
-  function (err) {}
+  function (xhr) {
+    console.log((xhr.loaded / xhr.total) * 100 + "% loaded");
+  },
+  function (err) {
+    console.error("An error occured while loading the model", err);
+  }
 );
 
 const renderer = new THREE.WebGLRenderer({ alpha: true });
@@ -47,16 +53,29 @@ const reRender3D = () => {
 
 reRender3D();
 
-const tl = gsap.timeline({
-  scrollTrigger: {
-    trigger: "#container3D",
-    start: "top top",
-    end: "+=3000",
-    markers: true,
-    scrub: 1,
-  },
-});
+function modelAnimations() {
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: "#container3D",
+      start: "top top",
+      end: "+=3000",
+      markers: true,
+      scrub: 1,
+    },
+  });
 
-tl.to(camera.position, { x: 0 });
-tl.to(camera.position, { z: 13 }, 0);
-tl.to(camera.position, { y: 0.19 }, 0.5);
+  tl.to(camera.position, { x: 0 });
+  tl.to(camera.position, { z: 13 }, 0);
+  tl.to(camera.position, { y: 0.19 }, 0.5);
+
+  const tl2 = gsap.timeline({
+    scrollTrigger: {
+      trigger: "#container3D",
+      start: "+=3000",
+      end: "+=2500",
+      markers: true,
+      scrub: 1,
+    },
+  });
+  tl2.to(napoleon.rotation, { y: Math.PI * 2 * -1 });
+}
