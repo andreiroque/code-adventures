@@ -70,10 +70,10 @@ function modelAnimations() {
     scrollTrigger: {
       trigger: "#container3D",
       start: "+=3000",
-      end: "+=2500",
+      end: "+=20000",
       // markers: true,
       scrub: 1,
     },
   });
-  tl2.to(napoleon.rotation, { y: Math.PI * 2 * -1 });
+  tl2.to(napoleon.rotation, { y: Math.PI * 6 * -1 });
 }
