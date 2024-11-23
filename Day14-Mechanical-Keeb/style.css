@@ -4,11 +4,15 @@
   box-sizing: border-box;
   font-family: "Dejavu Sans Mono", monospace;
 }
+body {
+  background-color: #111;
+}
 .main {
   height: 700dvh;
 }
 #container3D {
   position: fixed;
   inset: 0;
-  pointer-events: none;
+  z-index: 1000;
+  /* pointer-events: none; */
 }
