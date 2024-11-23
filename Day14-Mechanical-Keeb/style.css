@@ -4,3 +4,11 @@
   box-sizing: border-box;
   font-family: "Dejavu Sans Mono", monospace;
 }
+.main {
+  height: 700dvh;
+}
+#container3D {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+}
