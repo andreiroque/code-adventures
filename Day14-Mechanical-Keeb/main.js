@@ -44,6 +44,8 @@ loader.load(
     mixer = new THREE.AnimationMixer(model);
     const clip = gltf.animations[0]; // Assuming the first animation is the one you want
     action = mixer.clipAction(clip);
+    action.setLoop(THREE.LoopOnce); // Prevents looping
+    action.clampWhenFinished = true; // Holds the last frame when finished
     action.play(); // Play the animation (we'll control it via GSAP)
 
     // Setup GSAP ScrollTrigger after model is loaded
@@ -81,18 +83,13 @@ function setupScrollAnimation(clip) {
 
   // Control the animation's time using the scroll progress
   tl.to(
-    { time: 0 },
+    { time: 0 }, // Initial time
     {
       time: clip.duration, // Full duration of the animation
       onUpdate: function () {
         // Set the animation time based on scroll progress
         action.time = this.targets()[0].time;
         action.paused = false; // Ensure it's playing
-      },
-      onReverseComplete: function () {
-        // Ensure the animation is paused when scrolling backward
-        action.time = 0;
-        action.paused = true;
       },
     }
   );
