@@ -14,9 +14,10 @@ import {
 const App = () => {
   const inputRef = useRef();
   const [tasks, setTask] = useState([]);
+  const [status] = useState("Pending");
 
   const addTask = () => {
-    console.log(inputRef.current.value);
+    setTask([...tasks, { value: inputRef.current.value, status: status }]);
     inputRef.current.value = "";
   };
 
@@ -38,7 +39,34 @@ const App = () => {
               <TableHead>Action</TableHead>
             </TableRow>
           </TableHeader>
-          <TableBody></TableBody>
+          <TableBody>
+            {tasks.map((task, index) => (
+              <TableRow key={index}>
+                <TableCell>{task.value}</TableCell>
+                <TableCell>{task.status}</TableCell>
+                <TableCell>
+                  {
+                    <Button
+                      variant="outline"
+                      onClick={() => {
+                        //set status to "Done" when button is clicked.
+                        setTask(
+                          tasks.map((task, i) => {
+                            if (i == index) {
+                              return { ...task, status: "Done" };
+                            }
+                            return task;
+                          })
+                        );
+                      }}
+                    >
+                      Done
+                    </Button>
+                  }
+                </TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
         </Table>
       </div>
     </div>
