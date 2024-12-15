@@ -49,7 +49,6 @@ const App = () => {
                     <Button
                       variant="outline"
                       onClick={() => {
-                        //set status to "Done" when button is clicked.
                         setTask(
                           tasks.map((task, i) => {
                             if (i == index) {
