@@ -1,7 +1,12 @@
+import Navigation from "./components/Navigation";
+
 const App = () => {
   return (
     <div className="h-screen font-mono">
-      <h1>Hello, World!</h1>
+      <Navigation />
+      <div className="h-4/5 flex items-center justify-center">
+        <h1 className="text-8xl">Hello, World!</h1>
+      </div>
     </div>
   );
 };
