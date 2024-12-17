@@ -1,9 +1,7 @@
-import React from "react";
-
-const Menu = () => {
+const Menu = ({ className }) => {
   return (
-    <nav>
-      <ul>
+    <nav className={className}>
+      <ul className="md:flex gap-5 lg:hover:cursor-pointer">
         <a href="/home">
           <li>Home</li>
         </a>
