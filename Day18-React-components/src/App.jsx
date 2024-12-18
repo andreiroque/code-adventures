@@ -1,7 +1,11 @@
+import Input from "./components/Input";
+
 const App = () => {
   return (
-    <div>
-      <h1>Hello, World!</h1>
+    <div className="h-screen flex items-center justify-center gap-5">
+      <div>
+        <Input text="Task" />
+      </div>
     </div>
   );
 };
