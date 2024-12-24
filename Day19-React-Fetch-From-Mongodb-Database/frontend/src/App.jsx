@@ -18,7 +18,7 @@ const App = () => {
       .get("http://localhost:5000/api/students")
       .then((response) => setStudents(response.data))
       .catch((err) => console.error(err));
-  }, []);
+  }, [students]);
 
   return (
     <div className="h-screen flex items-center justify-center flex-col gap-20 font-mono">
