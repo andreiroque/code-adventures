@@ -11,6 +11,7 @@ function setup() {
 function draw() {
   background(3);
   for (let i = 0; i < balls.length; i++) {
+    balls[i].update();
     balls[i].show();
     for (let j = 0; j < balls.length; j++) {
       balls[i].checkDist(balls[j]);

@@ -3,11 +3,26 @@ class Ball {
     this.x = x;
     this.y = y;
     this.size = 20;
+    this.xvel = random(-5, 5);
+    this.yvel = random(-5, 5);
   }
 
   show() {
     noStroke();
     ellipse(this.x, this.y, this.size);
+  }
+
+  update() {
+    if (this.x < 0 || this.x > width - this.size / 2) {
+      this.xvel *= -1;
+    }
+
+    if (this.y < 0 || this.y > height - this.size / 2) {
+      this.yvel *= -1;
+    }
+
+    this.x += this.xvel;
+    this.y += this.yvel;
   }
 
   checkDist(other) {
