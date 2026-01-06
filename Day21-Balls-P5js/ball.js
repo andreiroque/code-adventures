@@ -4,4 +4,24 @@ class Ball {
     this.y = y;
     this.size = 20;
   }
+
+  show() {
+    noStroke();
+    ellipse(this.x, this.y, this.size);
+  }
+
+  checkDist(other) {
+    let x1 = this.x;
+    let y1 = this.y;
+    let x2 = other.x;
+    let y2 = other.y;
+
+    let d = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+
+    if (d <= 120) {
+      stroke(255);
+      strokeWeight(2);
+      line(x1, y1, x2, y2);
+    }
+  }
 }
